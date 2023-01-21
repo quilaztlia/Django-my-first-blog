@@ -57,7 +57,10 @@ def myFunc():
 django-admin.exe startproject mysite .
 
 # 2. DB - browse tables
-python manage.py migrate
+init:     > python manage.py migrate
+migration > python manage.py makemigrations blog
+apply-mig > python manage.py migrate blog
+
 # Django database adapters: Posrgress, Cassandra
 
 # 3. Run
@@ -67,6 +70,23 @@ python manage.py runserver
 # 4. Models
 Post: title, text, author, created_date, published_date
       write, publish, save, delete, unpublish 
+
+# 5. Startapp
+python manage.py startapp blog
+
+# 6. Models
+#__ => dunder, double-underscore
+# models.Model => Django Model : DB
+# ClassName : 1st Uppercase
+# Method    : 1st Lowercase & _ : calculate_average_price
+
+# 7. Create migration
+python manage.py makemigrations blog
+python manage.py migrate blog
+
+# 8. Blog/admin localhost:8000/admin
+python manage.py createsuperuser
+# https://docs.djangoproject.com/en/3.2/ref/contrib/admin/
 
 # Django:
 # https://docs.djangoproject.com/en/4.1/
