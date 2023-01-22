@@ -1,0 +1,9 @@
+# Based on https://tutorial.djangogirls.org/en/django/
+# https://github.com/DjangoGirls/tutorial
+
+# Create virtual env
+py -m venv djangogirls
+
+# Activate virtual env
+djangogirls\Scripts\activate
+#(djangogirls) C:\Users\ ..
